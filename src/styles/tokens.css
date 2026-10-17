@@ -1,0 +1,44 @@
+/* Dizajn tokeni — sve boje i fontovi su ovdje. Svijetla tema je zadana. */
+:root {
+  --bg: #eef0f3;
+  --surface: #ffffff;
+  --ink: #13151b;
+  --muted: #5b6170;
+  --line: #d5d9e1;
+  --accent: #2c47f5;
+  --accent-ink: #ffffff;
+  --cursor: #ff6b3d;
+  --ok: #1db66b;
+  --soft1: #dff0d8;
+  --soft2: #f6e3cf;
+  --soft3: #dcebee;
+  --soft4: #f1e6da;
+
+  --font-display: 'Bricolage Grotesque', 'Arial Black', system-ui, sans-serif;
+  --font-body: 'Instrument Sans', system-ui, -apple-system, 'Segoe UI', sans-serif;
+  --font-mono: 'JetBrains Mono', ui-monospace, Menlo, monospace;
+
+  --radius-lg: 28px;
+  --radius-md: 18px;
+  --max-w: 1180px;
+  --gutter-l: max(16px, env(safe-area-inset-left, 0px));
+  --gutter-r: max(16px, env(safe-area-inset-right, 0px));
+  --ease: cubic-bezier(0.2, 0.8, 0.2, 1);
+  color-scheme: light;
+}
+
+:root[data-theme='dark'] {
+  --bg: #0f1116;
+  --surface: #181b23;
+  --ink: #eceef3;
+  --muted: #9aa1b2;
+  --line: #2a2f3b;
+  --accent: #7a8cff;
+  --accent-ink: #0f1116;
+  --cursor: #ff7f57;
+  --soft1: #1f3324;
+  --soft2: #3a2c1e;
+  --soft3: #1c3036;
+  --soft4: #33291f;
+  color-scheme: dark;
+}

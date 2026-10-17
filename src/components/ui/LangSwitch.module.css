@@ -1,0 +1,21 @@
+.seg {
+  display: flex;
+  border: 1px solid var(--line);
+  border-radius: 999px;
+  padding: 3px;
+  background: var(--surface);
+}
+.opt {
+  border: 0;
+  background: transparent;
+  color: var(--muted);
+  font: 600 13px/1 var(--font-mono);
+  padding: 8px 10px;
+  border-radius: 999px;
+  cursor: pointer;
+  transition: background-color 0.2s, color 0.2s;
+}
+.opt[aria-pressed='true'] {
+  background: var(--ink);
+  color: var(--bg);
+}

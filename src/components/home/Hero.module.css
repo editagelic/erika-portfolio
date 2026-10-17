@@ -1,0 +1,128 @@
+.hero {
+  padding-block: 72px 64px;
+  display: grid;
+  gap: 36px;
+}
+.status {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  font-size: 14px;
+  color: var(--muted);
+}
+.dot {
+  width: 9px;
+  height: 9px;
+  border-radius: 50%;
+  background: var(--ok);
+  box-shadow: 0 0 0 4px color-mix(in srgb, var(--ok) 25%, transparent);
+  animation: pulse 2.4s infinite;
+}
+@keyframes pulse {
+  50% {
+    box-shadow: 0 0 0 8px color-mix(in srgb, var(--ok) 0%, transparent);
+  }
+}
+.title {
+  font-size: clamp(48px, 9.5vw, 132px);
+  font-weight: 800;
+  letter-spacing: -0.035em;
+  animation: rise 0.8s var(--ease) both;
+}
+@keyframes rise {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+}
+.sel {
+  position: relative;
+  display: inline-block;
+  color: var(--accent);
+  padding: 0 0.08em;
+}
+.sel::before {
+  content: '';
+  position: absolute;
+  inset: -0.02em -0.02em 0.04em;
+  border: 2px solid var(--accent);
+  pointer-events: none;
+}
+.h {
+  position: absolute;
+  width: 10px;
+  height: 10px;
+  background: var(--surface);
+  border: 2px solid var(--accent);
+}
+.tl { left: -5px; top: -5px; }
+.tr { right: -5px; top: -5px; }
+.bl { left: -5px; bottom: -1px; }
+.br { right: -5px; bottom: -1px; }
+.dim {
+  position: absolute;
+  left: 50%;
+  bottom: -30px;
+  transform: translateX(-50%);
+  font: 500 12px var(--font-mono);
+  letter-spacing: 0;
+  background: var(--accent);
+  color: var(--accent-ink);
+  padding: 2px 8px;
+  border-radius: 4px;
+  white-space: nowrap;
+}
+.cursor {
+  position: absolute;
+  right: -78px;
+  top: 58%;
+  display: flex;
+  align-items: flex-start;
+  gap: 2px;
+  animation: float 5s ease-in-out infinite;
+}
+.cursor b {
+  font: 600 13px var(--font-body);
+  letter-spacing: 0;
+  background: var(--cursor);
+  color: #fff;
+  padding: 3px 9px;
+  border-radius: 0 8px 8px 8px;
+  margin-top: 14px;
+}
+@keyframes float {
+  50% {
+    transform: translate(-14px, 10px);
+  }
+}
+.foot {
+  display: grid;
+  grid-template-columns: 1.3fr 1fr;
+  gap: 32px;
+  align-items: end;
+  margin-top: 22px;
+}
+.foot p {
+  font-size: clamp(18px, 2vw, 22px);
+  max-width: 36ch;
+  margin: 0;
+}
+.ctas {
+  display: flex;
+  gap: 12px;
+  flex-wrap: wrap;
+  justify-content: flex-end;
+}
+@media (max-width: 720px) {
+  .foot {
+    grid-template-columns: 1fr;
+  }
+  .ctas {
+    justify-content: flex-start;
+  }
+  .cursor {
+    right: auto;
+    left: 60%;
+    top: 100%;
+  }
+}

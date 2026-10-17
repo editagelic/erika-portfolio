@@ -1,0 +1,19 @@
+.strip {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px 14px;
+  align-items: center;
+  border-block: 1px solid var(--line);
+  padding-block: 20px;
+}
+.strip span {
+  font: 600 18px var(--font-display);
+  color: var(--muted);
+}
+.strip i {
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background: var(--accent);
+  opacity: 0.6;
+}

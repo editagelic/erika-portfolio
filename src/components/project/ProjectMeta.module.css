@@ -1,0 +1,15 @@
+.meta {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+  gap: 20px;
+  margin: 0;
+  padding-block: 32px;
+  border-bottom: 1px solid var(--line);
+}
+.meta div {
+  min-width: 0;
+}
+.meta dd {
+  margin: 4px 0 0;
+  font-weight: 600;
+}

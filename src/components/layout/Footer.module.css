@@ -1,0 +1,29 @@
+.footer {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 16px;
+  padding-block: 26px 40px;
+  color: var(--muted);
+  font-size: 14px;
+  position: relative;
+}
+.footer::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: var(--gutter-l);
+  right: var(--gutter-r);
+  border-top: 1px solid var(--line);
+}
+.links {
+  display: flex;
+  gap: 22px;
+  flex-wrap: wrap;
+}
+.links a {
+  text-decoration: none;
+}
+.links a:hover {
+  color: var(--ink);
+}

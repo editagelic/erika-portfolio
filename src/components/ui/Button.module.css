@@ -1,0 +1,25 @@
+.btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 12px 20px;
+  border-radius: 999px;
+  font: 600 15px/1.2 var(--font-body);
+  text-decoration: none;
+  cursor: pointer;
+  border: 0;
+  white-space: nowrap;
+  transition: transform 0.2s var(--ease), background-color 0.2s;
+}
+.btn:hover {
+  transform: translateY(-2px);
+}
+.solid {
+  background: var(--ink);
+  color: var(--bg);
+}
+.ghost {
+  background: transparent;
+  color: var(--ink);
+  border: 1.5px solid var(--line);
+}

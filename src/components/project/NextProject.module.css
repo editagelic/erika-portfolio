@@ -1,0 +1,35 @@
+.next {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 20px;
+  margin-top: 80px;
+  padding: 32px;
+  border-radius: var(--radius-lg);
+  background: var(--ink);
+  color: var(--bg);
+  text-decoration: none;
+  transition: transform 0.3s var(--ease);
+}
+.next:hover {
+  transform: translateY(-4px);
+}
+.eyebrow {
+  font: 12px var(--font-mono);
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  opacity: 0.65;
+}
+.next h3 {
+  font-size: clamp(28px, 4vw, 44px);
+  font-weight: 800;
+  letter-spacing: -0.02em;
+  margin-top: 6px;
+}
+.arrow {
+  font-size: 32px;
+  transition: transform 0.3s var(--ease);
+}
+.next:hover .arrow {
+  transform: translateX(6px);
+}
